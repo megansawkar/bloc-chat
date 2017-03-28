@@ -4,13 +4,13 @@
 						$uibModalInstance.dismiss();
 				};
 			
-				this.submit = function() {
-						Room.add(this.newRoom);
-						$uibModalInstance.close();
+				this.submit = function(roomName) {
+						Room.add(roomName);
+						$uibModalInstance.dismiss();
 				};
 		}
 	
 		angular 
 				.module('blocChat')
-				.controller('ModalCtrl', ['Room', '$iubModal', ModalCtrl]);
+				.controller('ModalCtrl', ['Room', '$uibModalInstance', ModalCtrl]);
 })();

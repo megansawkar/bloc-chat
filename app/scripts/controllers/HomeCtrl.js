@@ -2,7 +2,7 @@
 		function HomeCtrl(Room, $uibModal) {
 				this.rooms = Room.all;
 			
-				this.addRoom = function() {
+				this.add = function() {
 						$uibModal.open({
 								templateUrl: '/templates/modal.html',
 								size: 'sm',
