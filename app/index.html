@@ -2,8 +2,9 @@
 <html ng-app="blocChat">
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Bloc Base Project</title>
+    <title>Bloc Chat</title>
     <link rel="stylesheet" href="/styles/main.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
     
@@ -17,9 +18,13 @@
 		<!-- Firebase -->
 		<script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
 	
+		<!-- bootstrap -->
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+	
 		<!-- ui-router -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
 		<script>
+	
 		// Initialize Firebase
 		var config = {
 		apiKey: "AIzaSyAYfj-6GdJ4ebh-qArF7mliTZHE7-YuqYE",
@@ -33,5 +38,6 @@
 	  <script src="/scripts/app.js"></script>
 	  <script src="/scripts/controllers/HomeCtrl.js"></script>
 		<script src="/scripts/Room.js"></script>
+		<script src="/scripts/controllers/ModalCtrl.js"></script>
 </body>
 </html>
