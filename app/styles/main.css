@@ -1,0 +1,76 @@
+html {
+	height: 100%;
+	font-size: 100%;
+}
+
+body {
+	font-family: sans-serif;
+	min-height: 100%;
+}
+
+.carousel {
+	position: absolute;
+	height: 300px;
+}
+
+
+.main-nav {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	width: 20%;
+	height: 100%;
+	background-color: #ccffff;
+  z-index: 20;
+}
+
+.nav-pills {
+	font-size: 20px;
+	color: gray;
+	font-family: sans-serif;
+	text-decoration: none;
+}
+
+.room-name-title {
+	color: antiquewhite;
+}
+
+.nav-pills:hover {
+	background-color: white;
+}
+
+.new-room-button {
+	color: black;
+	text-shadow: 1px 1px gray;
+	background-color: aliceblue;
+	border: 1px solid gray;
+	padding: 5px 5px;
+	margin-left: 5px;
+	margin-bottom: 5px;
+	text-align: left;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+}
+
+.new-room-button:hover {
+	cursor: pointer;
+	background-color: gray;
+}
+
+.chat-area {
+	position: relative;
+	display: inline;
+	float: right;
+}
+
+.current-room .messages {
+	text-align: center;
+}
+
+.message-form {
+	text-align:center; 
+	padding: 30px;
+}
+

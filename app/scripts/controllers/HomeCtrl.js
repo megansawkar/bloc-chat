@@ -1,7 +1,8 @@
 (function() {
-		function HomeCtrl(Room, Message, $uibModal) {
+		function HomeCtrl(Room, Message, $cookies, $uibModal) {
 				this.rooms = Room.all;
 			  this.newMessage = {};
+				this.showMessage = false;
 			
 				this.addRoom = function() {
 						$uibModal.open({
@@ -11,21 +12,23 @@
 						});
 				}
 				
-				this.setCurrentRoom = function (room) {
+				this.setCurrentRoom = function(room) {
 						this.currentRoom = room;
+						this.showMessage = true;
 						this.messages = Message.getByRoomId(this.currentRoom.$id);
-						console.log(this.messages)
+						console.log(room)
 				}
 				
-				this.createNewMessage = function () {
-					this.newMessage.roomId = '';
-					this.newMessage.content = '';
-					this.newMessge.username = '';
-					Message.add(this.newMessage);	
+				this.createNewMessage = function(newMessage) {
+					this.newMessage.roomId = this.currentRoom.$id;
+					this.newMessage.content = newMessage;
+					this.newMessage.username = $cookies.get('blocChatCurrentUser');
+					Message.addMessage(this.newMessage);	
 				}
+				
 		}
-	
+
 		angular
-				.module('blocChat')
-				.controller('HomeCtrl', ['Room', 'Message', '$uibModal', HomeCtrl]);
+				.module('blocChat') 
+				.controller('HomeCtrl', ['Room', 'Message', '$cookies', '$uibModal', HomeCtrl]);
 })();

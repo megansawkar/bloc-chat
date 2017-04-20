@@ -7,19 +7,12 @@
 						return $firebaseArray(ref.orderByChild('roomId').equalTo(roomId));
 				}
 				
-				this.addMessage = function(newMessage) {
-							//newMessage.sentAt = ...
+				Message.addMessage = function(newMessage) {
+							newMessage.sentAt = firebase.database.ServerValue.TIMESTAMP;
 							messages.$add(newMessage);
 				};
-				
-				return Message;
 			
-				
-//				return {
-//						getByRoomId: function (roomId) {
-//								$firebaseArray(ref.orderByChild('roomId').equalTo(roomId));
-//						}
-//				}
+				return Message;
 		}
 	
 		angular 
