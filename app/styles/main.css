@@ -9,8 +9,8 @@ body {
 }
 
 .carousel {
-	position: absolute;
-	height: 300px;
+	position: fixed;
+	height: 200px;
 }
 
 

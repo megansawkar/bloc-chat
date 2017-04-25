@@ -27,6 +27,7 @@
 				}
 				
 		}
+		
 
 		angular
 				.module('blocChat') 
