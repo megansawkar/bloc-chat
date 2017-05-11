@@ -1,10 +1,4 @@
-<script type="text/javascript">
-$(document).ready(function() {
-    $('dropdown-toggle').dropdown()
-});
-</script>
-
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse navbar-static-top">
   <div class="container-fluid">
 		<div class="navbar-brand">Bloc Chat</div>
     
@@ -20,10 +14,10 @@ $(document).ready(function() {
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Rooms <b class="caret"></b></a>
 						
-						<ul class="dropdown-menu">
-						<ul ng-Repeat="room in home.rooms">
-							<li class="room-name-title"><a href="#" ng-click="home.setCurrentRoom(room)">{{ room.name }}</a></li>
-						</ul>
+						<ul>
+							<li ng-Repeat="room in home.rooms">
+								<a href="#" ng-click="home.setCurrentRoom(room)">{{ room.name }}</a>
+							</li>
 						</ul>
 						
 <!--

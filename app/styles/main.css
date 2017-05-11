@@ -62,7 +62,7 @@ a:hover {
 
 .chat-area {
 	position: absolute;
-	left: 20%;
+	width: 100%;
 	height: 100%;
 	width: auto;
 	color: black;
@@ -99,8 +99,7 @@ a:hover {
 	position: fixed;
 	bottom: 0;
 	right: 0;
-	left: 20%;
-	width: auto;
+	width: 100%;
 	height: 20%;
 	background-color: black;
 	padding: 5px;
