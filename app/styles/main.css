@@ -1,3 +1,9 @@
+ *, *::before, *::after {
+     -moz-box-sizing: border-box;
+     -webkit-box-sizing: border-box;
+     box-sizing: border-box;
+ }
+
 html {
 	height: 100%;
 	font-size: 100%;
@@ -8,69 +14,154 @@ body {
 	min-height: 100%;
 }
 
-.carousel {
-	position: fixed;
-	height: 200px;
-}
-
-
-.main-nav {
+/*
+.navbar {
 	position: absolute;
 	top: 0;
 	right: 0;
 	left: 0;
 	width: 20%;
-	height: 100%;
-	background-color: #ccffff;
+	min-height: 100%;
+	background-color: black;
+	color: white;
+	text-decoration: none;
+	padding: 10px;
   z-index: 20;
 }
+*/
 
-.nav-pills {
+.navbar-header {
+	font-family: 'Luckiest Guy', cursive;
+	width: auto;
 	font-size: 20px;
-	color: gray;
-	font-family: sans-serif;
-	text-decoration: none;
 }
 
-.room-name-title {
-	color: antiquewhite;
+.room-title {
+	font-family: 'Work Sans', sans-serif;
+	width: auto;
+}
+
+.navbar-btn {
+	width: auto;
+}
+
+a:link {
+	color: #33ccff;
+	text-decoration: none;
+	font-family: 'Raleway', sans-serif;
+	width: auto;
+}
+
+a:hover {
+	background-color: aquamarine;
 }
 
 .nav-pills:hover {
 	background-color: white;
 }
 
-.new-room-button {
-	color: black;
-	text-shadow: 1px 1px gray;
-	background-color: aliceblue;
-	border: 1px solid gray;
-	padding: 5px 5px;
-	margin-left: 5px;
-	margin-bottom: 5px;
-	text-align: left;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 20px;
-}
-
-.new-room-button:hover {
-	cursor: pointer;
-	background-color: gray;
-}
-
 .chat-area {
-	position: relative;
-	display: inline;
-	float: right;
+	position: absolute;
+	left: 20%;
+	height: 100%;
+	width: auto;
+	color: black;
+	background-color: white;
+	padding-left: 10px;
+	
 }
 
-.current-room .messages {
-	text-align: center;
+.current-room {
+	font-family: 'Work Sans', sans-serif;
+	font-size: 40px;
+	padding-bottom: 20px;
+}
+
+.username {
+	font-family: 'Work Sans', sans-serif;
+	font-size: 14px;
+	padding-bottom: 2px;
+}
+
+.usermessage {
+	font-family: 'Raleway', sans-serif;
+	font-size: 14px;
+	padding-bottom: 1px;
+}
+
+.usertimestamp {
+	font-family: sans-serif;
+	padding-bottom: 10px;
+	font-size: 8px;
 }
 
 .message-form {
-	text-align:center; 
-	padding: 30px;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	left: 20%;
+	width: auto;
+	height: 20%;
+	background-color: black;
+	padding: 5px;
+/*	text-align: center;*/
 }
+
+#message-input {
+	position: relative;
+	width: 95%;
+	height: 100%;
+	float: left;
+	padding: 15px;
+	outline: 0;
+	&:focus {
+		outline: 0;
+	}
+}
+
+.new-message-button {
+	margin-top: 4px;
+}
+
+/* Medium and small screens */
+@media screen and (min-width: 320px) and (max-width: 629px) {
+	html { font-size: 100%; }
+	.navbar {
+/*
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+*/
+		width: 100%;
+/*		height: auto;*/
+/*
+		background-color: black;
+		color: white;
+		text-decoration: none;
+		padding: 10px;
+		z-index: 20;
+*/
+		text-align: center;
+	}
+	
+	.chat-area {
+/*
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+*/
+		width: 100%;
+/*		height: auto;*/
+	}
+}
+
+/* Large screens */
+/*
+@media (min-width: 1024px) {
+	html { font-size: 120%; }
+}
+*/
+
 
