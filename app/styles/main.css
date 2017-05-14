@@ -14,67 +14,60 @@ body {
 	min-height: 100%;
 }
 
-/*
-.navbar {
-	position: absolute;
-	top: 0;
-	right: 0;
-	left: 0;
-	width: 20%;
-	min-height: 100%;
-	background-color: black;
-	color: white;
-	text-decoration: none;
-	padding: 10px;
-  z-index: 20;
-}
-*/
-
-.navbar-header {
+.navbar-brand {
 	font-family: 'Luckiest Guy', cursive;
-	width: auto;
-	font-size: 20px;
+	font-size: 30px;
+	left: 0;
 }
 
+/*
 .room-title {
 	font-family: 'Work Sans', sans-serif;
 	width: auto;
 }
+*/
 
 .navbar-btn {
 	width: auto;
 }
 
+/*
 a:link {
 	color: #33ccff;
 	text-decoration: none;
 	font-family: 'Raleway', sans-serif;
 	width: auto;
 }
+*/
+/*
 
 a:hover {
 	background-color: aquamarine;
 }
+*/
 
+/*
 .nav-pills:hover {
 	background-color: white;
 }
+*/
 
 .chat-area {
-	position: absolute;
+	position: relative;
 	width: 100%;
-	height: 100%;
+	height: 80%;
+	top: 40px;
 	width: auto;
 	color: black;
 	background-color: white;
 	padding-left: 10px;
+	padding-bottom: 130px;
 	
 }
 
 .current-room {
 	font-family: 'Work Sans', sans-serif;
-	font-size: 40px;
-	padding-bottom: 20px;
+	font-size: 30px;
 }
 
 .username {
@@ -100,19 +93,24 @@ a:hover {
 	bottom: 0;
 	right: 0;
 	width: 100%;
-	height: 20%;
+	height: auto;
 	background-color: black;
 	padding: 5px;
-/*	text-align: center;*/
+	align-content: center;
 }
 
 #message-input {
 	position: relative;
 	width: 95%;
-	height: 100%;
-	float: left;
+/*
+	left: auto;
+	right: auto;
+	margin-left: auto;
+	margin-right: auto;
+*/
 	padding: 15px;
 	outline: 0;
+	text-wrap: unrestriced;
 	&:focus {
 		outline: 0;
 	}
@@ -123,26 +121,24 @@ a:hover {
 }
 
 /* Medium and small screens */
+/*
 @media screen and (min-width: 320px) and (max-width: 629px) {
 	html { font-size: 100%; }
 	.navbar {
-/*
 		position: absolute;
 		bottom: 0;
 		left: 0;
 		right: 0;
-*/
 		width: 100%;
-/*		height: auto;*/
-/*
+		height: auto;
 		background-color: black;
 		color: white;
 		text-decoration: none;
 		padding: 10px;
 		z-index: 20;
-*/
 		text-align: center;
 	}
+*/
 	
 	.chat-area {
 /*
@@ -151,7 +147,7 @@ a:hover {
 		left: 0;
 		right: 0;
 */
-		width: 100%;
+/*		width: 100%;*/
 /*		height: auto;*/
 	}
 }
